@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81F97BF32AD4186800F9274A /* nemahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97BF22AD4186800F9274A /* nemahApp.swift */; };
+		81F97BF52AD4186800F9274A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97BF42AD4186800F9274A /* ContentView.swift */; };
+		81F97BF72AD4186900F9274A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F97BF62AD4186900F9274A /* Assets.xcassets */; };
+		81F97BFA2AD4186900F9274A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F97BF92AD4186900F9274A /* Preview Assets.xcassets */; };
+		81F97C042AD4186900F9274A /* nemahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C032AD4186900F9274A /* nemahTests.swift */; };
+		81F97C0E2AD4186900F9274A /* nemahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C0D2AD4186900F9274A /* nemahUITests.swift */; };
+		81F97C102AD4186900F9274A /* nemahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C0F2AD4186900F9274A /* nemahUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81F97C002AD4186900F9274A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81F97BE72AD4186700F9274A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81F97BEE2AD4186800F9274A;
+			remoteInfo = nemah;
+		};
+		81F97C0A2AD4186900F9274A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81F97BE72AD4186700F9274A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81F97BEE2AD4186800F9274A;
+			remoteInfo = nemah;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		81F97BEF2AD4186800F9274A /* nemah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nemah.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F97BF22AD4186800F9274A /* nemahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahApp.swift; sourceTree = "<group>"; };
+		81F97BF42AD4186800F9274A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81F97BF62AD4186900F9274A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81F97BF92AD4186900F9274A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81F97BFF2AD4186900F9274A /* nemahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nemahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F97C032AD4186900F9274A /* nemahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahTests.swift; sourceTree = "<group>"; };
+		81F97C092AD4186900F9274A /* nemahUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nemahUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F97C0D2AD4186900F9274A /* nemahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahUITests.swift; sourceTree = "<group>"; };
+		81F97C0F2AD4186900F9274A /* nemahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81F97BEC2AD4186800F9274A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97BFC2AD4186900F9274A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97C062AD4186900F9274A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81F97BE62AD4186700F9274A = {
+			isa = PBXGroup;
+			children = (
+				81F97BF12AD4186800F9274A /* nemah */,
+				81F97C022AD4186900F9274A /* nemahTests */,
+				81F97C0C2AD4186900F9274A /* nemahUITests */,
+				81F97BF02AD4186800F9274A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81F97BF02AD4186800F9274A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81F97BEF2AD4186800F9274A /* nemah.app */,
+				81F97BFF2AD4186900F9274A /* nemahTests.xctest */,
+				81F97C092AD4186900F9274A /* nemahUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81F97BF12AD4186800F9274A /* nemah */ = {
+			isa = PBXGroup;
+			children = (
+				81F97BF22AD4186800F9274A /* nemahApp.swift */,
+				81F97BF42AD4186800F9274A /* ContentView.swift */,
+				81F97BF62AD4186900F9274A /* Assets.xcassets */,
+				81F97BF82AD4186900F9274A /* Preview Content */,
+			);
+			path = nemah;
+			sourceTree = "<group>";
+		};
+		81F97BF82AD4186900F9274A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				81F97BF92AD4186900F9274A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81F97C022AD4186900F9274A /* nemahTests */ = {
+			isa = PBXGroup;
+			children = (
+				81F97C032AD4186900F9274A /* nemahTests.swift */,
+			);
+			path = nemahTests;
+			sourceTree = "<group>";
+		};
+		81F97C0C2AD4186900F9274A /* nemahUITests */ = {
+			isa = PBXGroup;
+			children = (
+				81F97C0D2AD4186900F9274A /* nemahUITests.swift */,
+				81F97C0F2AD4186900F9274A /* nemahUITestsLaunchTests.swift */,
+			);
+			path = nemahUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81F97BEE2AD4186800F9274A /* nemah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F97C132AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemah" */;
+			buildPhases = (
+				81F97BEB2AD4186800F9274A /* Sources */,
+				81F97BEC2AD4186800F9274A /* Frameworks */,
+				81F97BED2AD4186800F9274A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nemah;
+			productName = nemah;
+			productReference = 81F97BEF2AD4186800F9274A /* nemah.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81F97BFE2AD4186900F9274A /* nemahTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F97C162AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemahTests" */;
+			buildPhases = (
+				81F97BFB2AD4186900F9274A /* Sources */,
+				81F97BFC2AD4186900F9274A /* Frameworks */,
+				81F97BFD2AD4186900F9274A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81F97C012AD4186900F9274A /* PBXTargetDependency */,
+			);
+			name = nemahTests;
+			productName = nemahTests;
+			productReference = 81F97BFF2AD4186900F9274A /* nemahTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81F97C082AD4186900F9274A /* nemahUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F97C192AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemahUITests" */;
+			buildPhases = (
+				81F97C052AD4186900F9274A /* Sources */,
+				81F97C062AD4186900F9274A /* Frameworks */,
+				81F97C072AD4186900F9274A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81F97C0B2AD4186900F9274A /* PBXTargetDependency */,
+			);
+			name = nemahUITests;
+			productName = nemahUITests;
+			productReference = 81F97C092AD4186900F9274A /* nemahUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81F97BE72AD4186700F9274A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					81F97BEE2AD4186800F9274A = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					81F97BFE2AD4186900F9274A = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 81F97BEE2AD4186800F9274A;
+					};
+					81F97C082AD4186900F9274A = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 81F97BEE2AD4186800F9274A;
+					};
+				};
+			};
+			buildConfigurationList = 81F97BEA2AD4186700F9274A /* Build configuration list for PBXProject "nemah" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81F97BE62AD4186700F9274A;
+			productRefGroup = 81F97BF02AD4186800F9274A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81F97BEE2AD4186800F9274A /* nemah */,
+				81F97BFE2AD4186900F9274A /* nemahTests */,
+				81F97C082AD4186900F9274A /* nemahUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81F97BED2AD4186800F9274A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F97BFA2AD4186900F9274A /* Preview Assets.xcassets in Resources */,
+				81F97BF72AD4186900F9274A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97BFD2AD4186900F9274A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97C072AD4186900F9274A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81F97BEB2AD4186800F9274A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F97BF52AD4186800F9274A /* ContentView.swift in Sources */,
+				81F97BF32AD4186800F9274A /* nemahApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97BFB2AD4186900F9274A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F97C042AD4186900F9274A /* nemahTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F97C052AD4186900F9274A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F97C102AD4186900F9274A /* nemahUITestsLaunchTests.swift in Sources */,
+				81F97C0E2AD4186900F9274A /* nemahUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81F97C012AD4186900F9274A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81F97BEE2AD4186800F9274A /* nemah */;
+			targetProxy = 81F97C002AD4186900F9274A /* PBXContainerItemProxy */;
+		};
+		81F97C0B2AD4186900F9274A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81F97BEE2AD4186800F9274A /* nemah */;
+			targetProxy = 81F97C0A2AD4186900F9274A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		81F97C112AD4186900F9274A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81F97C122AD4186900F9274A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81F97C142AD4186900F9274A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nemah/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemah;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81F97C152AD4186900F9274A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nemah/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemah;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		81F97C172AD4186900F9274A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemahTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nemah.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nemah";
+			};
+			name = Debug;
+		};
+		81F97C182AD4186900F9274A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemahTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nemah.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nemah";
+			};
+			name = Release;
+		};
+		81F97C1A2AD4186900F9274A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemahUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nemah;
+			};
+			name = Debug;
+		};
+		81F97C1B2AD4186900F9274A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bsmah.nemahUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nemah;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81F97BEA2AD4186700F9274A /* Build configuration list for PBXProject "nemah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F97C112AD4186900F9274A /* Debug */,
+				81F97C122AD4186900F9274A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F97C132AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F97C142AD4186900F9274A /* Debug */,
+				81F97C152AD4186900F9274A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F97C162AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemahTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F97C172AD4186900F9274A /* Debug */,
+				81F97C182AD4186900F9274A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F97C192AD4186900F9274A /* Build configuration list for PBXNativeTarget "nemahUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F97C1A2AD4186900F9274A /* Debug */,
+				81F97C1B2AD4186900F9274A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81F97BE72AD4186700F9274A /* Project object */;
+}
