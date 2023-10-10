@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81F97BF32AD4186800F9274A /* nemahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97BF22AD4186800F9274A /* nemahApp.swift */; };
-		81F97BF52AD4186800F9274A /* Idspage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97BF42AD4186800F9274A /* Idspage.swift */; };
+		81F97BF52AD4186800F9274A /* Ideas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97BF42AD4186800F9274A /* Ideas.swift */; };
 		81F97BF72AD4186900F9274A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F97BF62AD4186900F9274A /* Assets.xcassets */; };
 		81F97BFA2AD4186900F9274A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F97BF92AD4186900F9274A /* Preview Assets.xcassets */; };
 		81F97C042AD4186900F9274A /* nemahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C032AD4186900F9274A /* nemahTests.swift */; };
@@ -16,8 +16,6 @@
 		81F97C102AD4186900F9274A /* nemahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C0F2AD4186900F9274A /* nemahUITestsLaunchTests.swift */; };
 		81F97C1D2AD42C7700F9274A /* Generaterecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C1C2AD42C7700F9274A /* Generaterecipe.swift */; };
 		81F97C1F2AD4304C00F9274A /* Recipe&ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C1E2AD4304C00F9274A /* Recipe&ingredients.swift */; };
-		81F97C212AD4317100F9274A /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C202AD4317100F9274A /* Recipes.swift */; };
-		81F97C232AD4488200F9274A /* AddedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F97C222AD4488200F9274A /* AddedFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +38,7 @@
 /* Begin PBXFileReference section */
 		81F97BEF2AD4186800F9274A /* nemah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nemah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F97BF22AD4186800F9274A /* nemahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahApp.swift; sourceTree = "<group>"; };
-		81F97BF42AD4186800F9274A /* Idspage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idspage.swift; sourceTree = "<group>"; };
+		81F97BF42AD4186800F9274A /* Ideas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ideas.swift; sourceTree = "<group>"; };
 		81F97BF62AD4186900F9274A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81F97BF92AD4186900F9274A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81F97BFF2AD4186900F9274A /* nemahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nemahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,8 +48,6 @@
 		81F97C0F2AD4186900F9274A /* nemahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nemahUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		81F97C1C2AD42C7700F9274A /* Generaterecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generaterecipe.swift; sourceTree = "<group>"; };
 		81F97C1E2AD4304C00F9274A /* Recipe&ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe&ingredients.swift"; sourceTree = "<group>"; };
-		81F97C202AD4317100F9274A /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
-		81F97C222AD4488200F9274A /* AddedFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				81F97BF22AD4186800F9274A /* nemahApp.swift */,
-				81F97BF42AD4186800F9274A /* Idspage.swift */,
+				81F97BF42AD4186800F9274A /* Ideas.swift */,
 				81F97C1C2AD42C7700F9274A /* Generaterecipe.swift */,
-				81F97C202AD4317100F9274A /* Recipes.swift */,
 				81F97C1E2AD4304C00F9274A /* Recipe&ingredients.swift */,
-				81F97C222AD4488200F9274A /* AddedFile.swift */,
 				81F97BF62AD4186900F9274A /* Assets.xcassets */,
 				81F97BF82AD4186900F9274A /* Preview Content */,
 			);
@@ -269,9 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F97C212AD4317100F9274A /* Recipes.swift in Sources */,
-				81F97BF52AD4186800F9274A /* Idspage.swift in Sources */,
-				81F97C232AD4488200F9274A /* AddedFile.swift in Sources */,
+				81F97BF52AD4186800F9274A /* Ideas.swift in Sources */,
 				81F97C1F2AD4304C00F9274A /* Recipe&ingredients.swift in Sources */,
 				81F97BF32AD4186800F9274A /* nemahApp.swift in Sources */,
 				81F97C1D2AD42C7700F9274A /* Generaterecipe.swift in Sources */,
