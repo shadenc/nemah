@@ -14,8 +14,8 @@ struct RecipeCarsoule: View {
     private let screenSize = UIScreen.main.bounds
     let recipe: [Recipe]
     
-    init(recipe: [Recipe]) {
-        self.recipe = recipe
+    init(recipes: [Recipe]) {
+        self.recipes = recipes
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.secondary)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.primary)
     }
@@ -27,7 +27,7 @@ struct RecipeCarsoule: View {
                         self.recipe = recipe[index]
                     }
                 }){
-                    ProductCarouselCard(product: products[index])
+                    RecipeCarouselCard(product: recipes[index])
                         .frame(width: (screenSize.width - 24))
                         .shadow(color: .gray.opacity(0.1), radius: 3, x: 1, y: 2)
                 }
