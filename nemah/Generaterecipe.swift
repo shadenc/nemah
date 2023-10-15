@@ -19,69 +19,64 @@ struct GenerateRecipes: View {
     
         NavigationStack {
             ZStack{
+                
+
                 Color("BG").ignoresSafeArea()
                 VStack(spacing: 20) {
-                    
                     VStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(
-                                
-                                Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1))
-                            )
-                        
-                            .frame(width: 349 ,height: 169 )
-                            .overlay {
-                                VStack{
-                                    HStack{
-                                        Spacer()
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color.white)
-                                            .frame(width: 59 ,height: 61 )
-                                            .overlay(
-                                                Image(systemName: "wand.and.stars")
-                                                    .font(.title)
-                                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1)))
+                    RoundedRectangle(cornerRadius: 20)
+                    .fill(
+                                                    
+                 Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1)))
+                                            
+                .frame(width: 349 ,height: 169 )
+                .overlay {
+                VStack{
+                HStack{
+                Spacer()
+                RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .frame(width: 59 ,height: 61 )
+                .overlay(
+                Image(systemName: "wand.and.stars")
+                .font(.title)
+                .foregroundColor(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1))))
+                                                            Spacer()
+                                                            
+                Text("We’ll conjure a recipe from     your ingredients")
+                .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
+                .fontWeight(.medium)
+                .foregroundColor(Color.white)
+                Spacer()
+                                                        }
+                .padding(10)
+                           
+                    
+                                                        
+                Button(action: {})  { Label("Generate Recipe", systemImage: "wand.and.stars")
+                                                            
+                            .foregroundColor(Color(#colorLiteral(red: 0.7763370872, green: 1, blue: 0.8602109551, alpha: 1)))
+                            .frame(width: 316, height: 55)
+                            .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1))))
+                                                        }
+                                                        
+                                                        
+                                                    }
+                                                }
+                                        }
+
+                    VStack{
+                                            HStack{
+                                                Spacer(minLength: 10)
                                                 
-                                            )
-                                        Spacer()
+                                                
+                                                Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1))
+                                                    .frame(height: 1 / UIScreen.main.scale)
+                                                Spacer(minLength: 10)
+                                            }
+                                        }
                                         
-                                        Text("We’ll conjure a recipe from     your ingredients")
-                                            .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
-                                            .fontWeight(.medium)
-                                            .foregroundColor(Color.white)
-                                        Spacer()
-                                    }
-                                    .padding(10)
-                                    
-                                    
-                                    Button(action: {
-                                        
-                                    })  { Label("Generate Recipe", systemImage: "wand.and.stars")
-                                        
-                                            .foregroundColor(Color(#colorLiteral(red: 0.7763370872, green: 1, blue: 0.8602109551, alpha: 1)))
-                                            .frame(width: 316, height: 55)
-                                            .overlay(RoundedRectangle(cornerRadius: 15)
-                                                .stroke(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1)))
-                                            )
-                                    }
-                                    
-                                    
-                                }
-                            }
-                    }
-                    
-                    //Horizontal Line in VStack
-                    VStack{
-                        HStack{
-                            Spacer(minLength: 10)
-                            
-                            
-                            Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1))
-                                .frame(height: 1 / UIScreen.main.scale)
-                            Spacer(minLength: 10)
-                        }
-                    }
-                    
                     ScrollView {
                         Button(action: {
                             isMeatsSheetPresented.toggle()
@@ -89,7 +84,7 @@ struct GenerateRecipes: View {
                         }, label: {
                             ZStack {
                                 
-                                //test
+                                
                                 Image("meat2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
@@ -113,7 +108,33 @@ struct GenerateRecipes: View {
                         
                         .sheet(isPresented: $isMeatsSheetPresented, content: {
                             
-                            IngredientsViewSheet(isMeatsSheetPresented: $isMeatsSheetPresented)
+                            NavigationStack{
+                                ZStack{
+                                    Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                                    
+
+                                        ScrollView{
+                                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                                Image("fish")
+                                                Image("meat1")
+                                                Image("chickin")
+                                              
+                                            }
+                                        }
+                                    
+                                }
+                                
+                             
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar{
+                                    ToolbarItem(placement: .topBarTrailing) {
+                                        Button("Done") {
+                                            
+                                            isMeatsSheetPresented.toggle()
+                                        }
+                                    }
+                                }
+                            }
                         })
                         
                         
@@ -140,31 +161,30 @@ struct GenerateRecipes: View {
                         })
                         .sheet(isPresented: $isFroutsSheetPresented, content: {
                             
-                            ZStack{
-                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                                
-                                VStack {
+                            NavigationStack{
+                                ZStack{
+                                    Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                                     
-                                    HStack{
-                                        Text("Frouts")
-                                            .font(.system(size: 20)).bold()
-                                            .foregroundColor(.white)
-                                            .padding(.horizontal).position(CGPoint(x: 50, y: 30))
-                                        Button(action: {
-                                            isFroutsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                        }) {
-                                            Text("Done")
-                                                .foregroundColor(.blue)
-                                                .padding().position(CGPoint(x: 155, y: 25))
-                                            
+
+                                        ScrollView{
+                                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                               
+                                              
+                                            }
                                         }
-                                        
-                                    }
-                                    
-                                    
                                     
                                 }
                                 
+                             
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar{
+                                    ToolbarItem(placement: .topBarTrailing) {
+                                        Button("Done") {
+                                            
+                                            isFroutsSheetPresented.toggle()
+                                        }
+                                    }
+                                }
                             }
                             
                         })
@@ -173,7 +193,6 @@ struct GenerateRecipes: View {
                         
                         Button(action: {isVeggiesSheetPresented.toggle()},
                                label: {
-                            
                             ZStack {
                                 Image("vigi2")
                                     .resizable()
@@ -191,32 +210,34 @@ struct GenerateRecipes: View {
                         })
                         
                         .sheet(isPresented: $isVeggiesSheetPresented, content: {
-                            ZStack{
-                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                                
-                                VStack {
+                            NavigationStack{
+                                ZStack{
+                                    Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                                     
-                                    HStack{
-                                        Text("Vegetables")
-                                            .font(.system(size: 25)).bold()
-                                            .foregroundColor(.white)
-                                            .padding(.horizontal).position(CGPoint(x: 80, y: 30))
-                                        Button(action: {
-                                            isVeggiesSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                        }) {
-                                            Text("Done")
-                                                .foregroundColor(.blue)
-                                                .padding().position(CGPoint(x: 155, y: 25))
-                                            
+
+                                        ScrollView{
+                                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                                Image("fish")
+                                                Image("meat1")
+                                                Image("chickin")
+                                              
+                                            }
                                         }
-                                        
-                                    }
-                                    
-                                    
                                     
                                 }
                                 
+                             
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar{
+                                    ToolbarItem(placement: .topBarTrailing) {
+                                        Button("Done") {
+                                            
+                                            isVeggiesSheetPresented.toggle()
+                                        }
+                                    }
+                                }
                             }
+
                             
                             
                         })
@@ -238,32 +259,33 @@ struct GenerateRecipes: View {
                             }
                         })
                         .sheet(isPresented: $isMilkSheetPresented, content: {
-                            ZStack{
-                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                                
-                                VStack {
+                            NavigationStack{
+                                ZStack{
+                                    Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                                     
-                                    HStack{
-                                        Text("Milk and Cheese")
-                                            .font(.system(size: 20)).bold()
-                                            .foregroundColor(.white)
-                                            .padding(.horizontal).position(CGPoint(x: 90, y: 30))
-                                        Button(action: {
-                                            isMilkSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                        }) {
-                                            Text("Done")
-                                                .foregroundColor(.blue)
-                                                .padding().position(CGPoint(x: 155, y: 25))
-                                            
+
+                                        ScrollView{
+                                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                                Image("fish")
+                                                Image("meat1")
+                                                Image("chickin")
+                                              
+                                            }
                                         }
-                                        
-                                    }
-                                    
-                                    
                                     
                                 }
-                                
+                             
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar{
+                                    ToolbarItem(placement: .topBarTrailing) {
+                                        Button("Done") {
+                                            
+                                            isMilkSheetPresented.toggle()
+                                        }
+                                    }
+                                }
                             }
+
                             
                             
                         })
@@ -289,32 +311,32 @@ struct GenerateRecipes: View {
                         })
                     }
                 .sheet(isPresented: $isGrainsSheetPresented, content: {
-                    ZStack{
-                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                        
-                        VStack {
+                    NavigationStack{
+                        ZStack{
+                            Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                             
-                            HStack{
-                                Text("Grains")
-                                    .font(.system(size: 22)).bold()
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal).position(CGPoint(x: 50, y: 30))
-                                    Button(action: {
-                                        isGrainsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                                               }) {
-                               Text("Done")
-                              .foregroundColor(.blue)
-                              .padding().position(CGPoint(x: 155, y: 25))
-                                
-                                                               }
-                            
-                                                           }
-                           
-                            
-                         
-                            }
+
+                                ScrollView{
+                                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                        Image("fish")
+                                        Image("meat1")
+                                        Image("chickin")
+                                      
+                                    }
+                                }
                             
                         }
+                     
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar{
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("Done") {
+                                    
+                                    isGrainsSheetPresented.toggle()
+                                }
+                            }
+                        }
+                    }
 
                     
                 })
