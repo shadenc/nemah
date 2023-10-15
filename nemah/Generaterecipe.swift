@@ -55,32 +55,7 @@ struct GenerateRecipes: View {
                     
                     .sheet(isPresented: $isMeatsSheetPresented, content: {
                         
-                        ZStack{
-                            Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                            
-                            VStack {
-                                
-                                HStack{
-                                    Text("Meats")
-                                        .font(.system(size: 20)).bold()
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal).position(CGPoint(x: 45, y: 30))
-                                        Button(action: {
-                                        isMeatsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                                                   }) {
-                                   Text("Done")
-                                  .foregroundColor(.blue)
-                                  .padding().position(CGPoint(x: 155, y: 25))
-                                    
-                                                                   }
-                                
-                                                               }
-                               
-                                
-                             
-                                }
-                                
-                            }
+                        IngredientsViewSheet(isMeatsSheetPresented: $isMeatsSheetPresented)
                         })
                                 
                             
