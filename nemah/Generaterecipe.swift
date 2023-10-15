@@ -22,213 +22,272 @@ struct GenerateRecipes: View {
                 Color("BG").ignoresSafeArea()
                 VStack(spacing: 20) {
                     
-                    
-                    
-                    
-                    Button(action: {
-                        isMeatsSheetPresented.toggle()
-                        
-                    }, label: {
-                        ZStack {
-                            
-                            //test
-                            Image("meat2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 349, height: 120)
-                                .cornerRadius(10)
-                                .shadow(radius: 22)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.clear, lineWidth: 10)
-                                        .shadow(color:Color.black.opacity(1),radius: 5, x: 0, y: 4)
-                                )
-                            
-                            Text("Meats")
-                                .font(.system(size: 36, weight: .bold))
-                                .offset(x: -100)
-                                .foregroundColor(.white)
-                            
-                        }
-                    })
-                    
-                    
-                    .sheet(isPresented: $isMeatsSheetPresented, content: {
-                        
-                        IngredientsViewSheet(isMeatsSheetPresented: $isMeatsSheetPresented)
-                        })
+                    VStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(
                                 
-                            
-                
-                Button(action: {isFroutsSheetPresented.toggle()
-                }, label: {
-                    ZStack {
-                        Image("frout2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 349, height: 120)
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.clear, lineWidth: 10)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 4)
+                                Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1))
                             )
-                        Text("Frouts")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .offset(x: -240)
-                    }
-                })
-                .sheet(isPresented: $isFroutsSheetPresented, content: {
-                    
-                    ZStack{
-                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                         
-                        VStack {
+                            .frame(width: 349 ,height: 169 )
+                            .overlay {
+                                VStack{
+                                    HStack{
+                                        Spacer()
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color.white)
+                                            .frame(width: 59 ,height: 61 )
+                                            .overlay(
+                                                Image(systemName: "wand.and.stars")
+                                                    .font(.title)
+                                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1)))
+                                                
+                                            )
+                                        Spacer()
+                                        
+                                        Text("We’ll conjure a recipe from     your ingredients")
+                                            .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
+                                            .fontWeight(.medium)
+                                            .foregroundColor(Color.white)
+                                        Spacer()
+                                    }
+                                    .padding(10)
+                                    
+                                    
+                                    Button(action: {
+                                        
+                                    })  { Label("Generate Recipe", systemImage: "wand.and.stars")
+                                        
+                                            .foregroundColor(Color(#colorLiteral(red: 0.7763370872, green: 1, blue: 0.8602109551, alpha: 1)))
+                                            .frame(width: 316, height: 55)
+                                            .overlay(RoundedRectangle(cornerRadius: 15)
+                                                .stroke(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1)))
+                                            )
+                                    }
+                                    
+                                    
+                                }
+                            }
+                    }
+                    
+                    //Horizontal Line in VStack
+                    VStack{
+                        HStack{
+                            Spacer(minLength: 10)
                             
-                            HStack{
+                            
+                            Color(#colorLiteral(red: 0.1923318505, green: 0.2245685756, blue: 0.2881854773, alpha: 1))
+                                .frame(height: 1 / UIScreen.main.scale)
+                            Spacer(minLength: 10)
+                        }
+                    }
+                    
+                    ScrollView {
+                        Button(action: {
+                            isMeatsSheetPresented.toggle()
+                            
+                        }, label: {
+                            ZStack {
+                                
+                                //test
+                                Image("meat2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 349, height: 120)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 22)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.clear, lineWidth: 10)
+                                            .shadow(color:Color.black.opacity(1),radius: 5, x: 0, y: 4)
+                                    )
+                                
+                                Text("Meats")
+                                    .font(.system(size: 36, weight: .bold))
+                                    .offset(x: -100)
+                                    .foregroundColor(.white)
+                                
+                            }
+                        })
+                        
+                        
+                        .sheet(isPresented: $isMeatsSheetPresented, content: {
+                            
+                            IngredientsViewSheet(isMeatsSheetPresented: $isMeatsSheetPresented)
+                        })
+                        
+                        
+                        
+                        Button(action: {isFroutsSheetPresented.toggle()
+                        }, label: {
+                            ZStack {
+                                Image("frout2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 349, height: 120)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.clear, lineWidth: 10)
+                                            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 4)
+                                    )
                                 Text("Frouts")
-                                    .font(.system(size: 20)).bold()
+                                    .font(.system(size: 36, weight: .bold))
                                     .foregroundColor(.white)
-                                    .padding(.horizontal).position(CGPoint(x: 50, y: 30))
-                                    Button(action: {
-                                        isFroutsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                                               }) {
-                               Text("Done")
-                              .foregroundColor(.blue)
-                              .padding().position(CGPoint(x: 155, y: 25))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .offset(x: -240)
+                            }
+                        })
+                        .sheet(isPresented: $isFroutsSheetPresented, content: {
+                            
+                            ZStack{
+                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                                 
-                                                               }
-                            
-                                                           }
-                           
-                            
-                         
+                                VStack {
+                                    
+                                    HStack{
+                                        Text("Frouts")
+                                            .font(.system(size: 20)).bold()
+                                            .foregroundColor(.white)
+                                            .padding(.horizontal).position(CGPoint(x: 50, y: 30))
+                                        Button(action: {
+                                            isFroutsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                        }) {
+                                            Text("Done")
+                                                .foregroundColor(.blue)
+                                                .padding().position(CGPoint(x: 155, y: 25))
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                                
                             }
                             
-                        }
-
-                })
-                
-                
-                
-                Button(action: {isVeggiesSheetPresented.toggle()},
-                       label: {
-                    
-                    ZStack {
-                        Image("vigi2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 349, height: 120)
-                            .cornerRadius(10)
+                        })
                         
-                        Text("Vegetables")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .offset(x: -160)
                         
-                    }
-                })
-                
-                .sheet(isPresented: $isVeggiesSheetPresented, content: {
-                    ZStack{
-                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                         
-                        VStack {
+                        Button(action: {isVeggiesSheetPresented.toggle()},
+                               label: {
                             
-                            HStack{
+                            ZStack {
+                                Image("vigi2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 349, height: 120)
+                                    .cornerRadius(10)
+                                
                                 Text("Vegetables")
-                                    .font(.system(size: 25)).bold()
+                                    .font(.system(size: 36, weight: .bold))
                                     .foregroundColor(.white)
-                                    .padding(.horizontal).position(CGPoint(x: 80, y: 30))
-                                    Button(action: {
-                                        isVeggiesSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                                               }) {
-                               Text("Done")
-                              .foregroundColor(.blue)
-                              .padding().position(CGPoint(x: 155, y: 25))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .offset(x: -160)
                                 
-                                                               }
-                            
-                                                           }
-                           
-                            
-                         
+                            }
+                        })
+                        
+                        .sheet(isPresented: $isVeggiesSheetPresented, content: {
+                            ZStack{
+                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                                
+                                VStack {
+                                    
+                                    HStack{
+                                        Text("Vegetables")
+                                            .font(.system(size: 25)).bold()
+                                            .foregroundColor(.white)
+                                            .padding(.horizontal).position(CGPoint(x: 80, y: 30))
+                                        Button(action: {
+                                            isVeggiesSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                        }) {
+                                            Text("Done")
+                                                .foregroundColor(.blue)
+                                                .padding().position(CGPoint(x: 155, y: 25))
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                                
                             }
                             
-                        }
-
-                    
-                })
-                
-                Button(action: {isMilkSheetPresented.toggle()}, label: {
-                    ZStack {
-                        Image("milk2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 349, height: 120)
-                            .cornerRadius(10)
-                        
-                        
-                        Text("Milk and cheese")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .offset(x: -88)
-                    }
-                })
-                .sheet(isPresented: $isMilkSheetPresented, content: {
-                    ZStack{
-                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
-                        
-                        VStack {
                             
-                            HStack{
-                                Text("Milk and Cheese")
-                                    .font(.system(size: 20)).bold()
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal).position(CGPoint(x: 90, y: 30))
-                                    Button(action: {
-                                        isMilkSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
-                                                               }) {
-                               Text("Done")
-                              .foregroundColor(.blue)
-                              .padding().position(CGPoint(x: 155, y: 25))
+                        })
+                        
+                        Button(action: {isMilkSheetPresented.toggle()}, label: {
+                            ZStack {
+                                Image("milk2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 349, height: 120)
+                                    .cornerRadius(10)
                                 
-                                                               }
-                            
-                                                           }
-                           
-                            
-                         
+                                
+                                Text("Milk and cheese")
+                                    .font(.system(size: 36, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .offset(x: -88)
+                            }
+                        })
+                        .sheet(isPresented: $isMilkSheetPresented, content: {
+                            ZStack{
+                                Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                                
+                                VStack {
+                                    
+                                    HStack{
+                                        Text("Milk and Cheese")
+                                            .font(.system(size: 20)).bold()
+                                            .foregroundColor(.white)
+                                            .padding(.horizontal).position(CGPoint(x: 90, y: 30))
+                                        Button(action: {
+                                            isMilkSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                        }) {
+                                            Text("Done")
+                                                .foregroundColor(.blue)
+                                                .padding().position(CGPoint(x: 155, y: 25))
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                                
                             }
                             
-                        }
-
-                    
-                })
-                
-                Button(action: {isGrainsSheetPresented.toggle()}, label: {
-                    ZStack {
-                        Image("grin2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 349, height: 120)
-                            .cornerRadius(10)
+                            
+                        })
                         
-                        
-                        Text("Grains")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .offset(x: -245)
+                        Button(action: {isGrainsSheetPresented.toggle()}, label: {
+                            ZStack {
+                                Image("grin2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 349, height: 120)
+                                    .cornerRadius(10)
+                                
+                                
+                                Text("Grains")
+                                    .font(.system(size: 36, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .offset(x: -245)
+                            }
+                            
+                            
+                            
+                        })
                     }
-                    
-                    
-                    
-                })
                 .sheet(isPresented: $isGrainsSheetPresented, content: {
                     ZStack{
                         Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
