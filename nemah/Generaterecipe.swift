@@ -13,44 +13,52 @@ struct GenerateRecipes: View {
     @State private var isVeggiesSheetPresented = false
     @State private var isMilkSheetPresented = false
     @State private var isGrainsSheetPresented = false
+
+    
     var body: some View {
-        
+    
         NavigationStack {
             ZStack{
                 Color("BG").ignoresSafeArea()
-            VStack(spacing: 20) {
-                
-                
-                Button(action: {
-                    isMeatsSheetPresented.toggle()
+                VStack(spacing: 20) {
                     
-                }, label: {
-                    ZStack {
-                        Image("meat2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 349, height: 120)
-                            .cornerRadius(10)
-                            .shadow(radius: 22)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.clear, lineWidth: 10)
-                                    .shadow(color:Color.black.opacity(1),radius: 5, x: 0, y: 4)
-                            )
+                    
+                    
+                    
+                    Button(action: {
+                        isMeatsSheetPresented.toggle()
                         
-                        Text("Meats")
-                            .font(.system(size: 36, weight: .bold))
-                            .offset(x: -100)
-                            .foregroundColor(.white)
+                    }, label: {
+                        ZStack {
+                            
+                            //test
+                            Image("meat2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 349, height: 120)
+                                .cornerRadius(10)
+                                .shadow(radius: 22)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.clear, lineWidth: 10)
+                                        .shadow(color:Color.black.opacity(1),radius: 5, x: 0, y: 4)
+                                )
+                            
+                            Text("Meats")
+                                .font(.system(size: 36, weight: .bold))
+                                .offset(x: -100)
+                                .foregroundColor(.white)
+                            
+                        }
+                    })
+                    
+                    
+                    .sheet(isPresented: $isMeatsSheetPresented, content: {
                         
-                    }
-                })
-                .sheet(isPresented: $isMeatsSheetPresented, content: {
-                    Text("this is the sheet")
-                })
-                
-                
-                
+                        IngredientsViewSheet(isMeatsSheetPresented: $isMeatsSheetPresented)
+                        })
+                                
+                            
                 
                 Button(action: {isFroutsSheetPresented.toggle()
                 }, label: {
@@ -73,7 +81,34 @@ struct GenerateRecipes: View {
                     }
                 })
                 .sheet(isPresented: $isFroutsSheetPresented, content: {
-                    Text("this is the sheet")
+                    
+                    ZStack{
+                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                        
+                        VStack {
+                            
+                            HStack{
+                                Text("Frouts")
+                                    .font(.system(size: 20)).bold()
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal).position(CGPoint(x: 50, y: 30))
+                                    Button(action: {
+                                        isFroutsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                                               }) {
+                               Text("Done")
+                              .foregroundColor(.blue)
+                              .padding().position(CGPoint(x: 155, y: 25))
+                                
+                                                               }
+                            
+                                                           }
+                           
+                            
+                         
+                            }
+                            
+                        }
+
                 })
                 
                 
@@ -98,7 +133,33 @@ struct GenerateRecipes: View {
                 })
                 
                 .sheet(isPresented: $isVeggiesSheetPresented, content: {
-                    Text("this")
+                    ZStack{
+                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                        
+                        VStack {
+                            
+                            HStack{
+                                Text("Vegetables")
+                                    .font(.system(size: 25)).bold()
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal).position(CGPoint(x: 80, y: 30))
+                                    Button(action: {
+                                        isVeggiesSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                                               }) {
+                               Text("Done")
+                              .foregroundColor(.blue)
+                              .padding().position(CGPoint(x: 155, y: 25))
+                                
+                                                               }
+                            
+                                                           }
+                           
+                            
+                         
+                            }
+                            
+                        }
+
                     
                 })
                 
@@ -119,7 +180,33 @@ struct GenerateRecipes: View {
                     }
                 })
                 .sheet(isPresented: $isMilkSheetPresented, content: {
-                    Text("this")
+                    ZStack{
+                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                        
+                        VStack {
+                            
+                            HStack{
+                                Text("Milk and Cheese")
+                                    .font(.system(size: 20)).bold()
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal).position(CGPoint(x: 90, y: 30))
+                                    Button(action: {
+                                        isMilkSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                                               }) {
+                               Text("Done")
+                              .foregroundColor(.blue)
+                              .padding().position(CGPoint(x: 155, y: 25))
+                                
+                                                               }
+                            
+                                                           }
+                           
+                            
+                         
+                            }
+                            
+                        }
+
                     
                 })
                 
@@ -143,7 +230,33 @@ struct GenerateRecipes: View {
                     
                 })
                 .sheet(isPresented: $isGrainsSheetPresented, content: {
-                    Text("this")
+                    ZStack{
+                        Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
+                        
+                        VStack {
+                            
+                            HStack{
+                                Text("Grains")
+                                    .font(.system(size: 22)).bold()
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal).position(CGPoint(x: 50, y: 30))
+                                    Button(action: {
+                                        isGrainsSheetPresented.toggle() // This dismisses the sheet when "Done" is tapped
+                                                               }) {
+                               Text("Done")
+                              .foregroundColor(.blue)
+                              .padding().position(CGPoint(x: 155, y: 25))
+                                
+                                                               }
+                            
+                                                           }
+                           
+                            
+                         
+                            }
+                            
+                        }
+
                     
                 })
             }
@@ -151,6 +264,7 @@ struct GenerateRecipes: View {
             }
         }
     }
+
 #Preview {
     GenerateRecipes()
 }
