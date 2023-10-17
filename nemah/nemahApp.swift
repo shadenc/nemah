@@ -11,13 +11,10 @@ import SwiftUI
 struct nemahApp: App {
     var body: some Scene {
         WindowGroup {
-<<<<<<< HEAD
-           // ContentView()
+
             RecipeIngredientsView()
                 .preferredColorScheme(.dark)
-=======
-            Ideas()
->>>>>>> main
+
         }
     }
 }
