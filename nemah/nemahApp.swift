@@ -11,7 +11,9 @@ import SwiftUI
 struct nemahApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           // ContentView()
+            RecipeIngredientsView()
+                .preferredColorScheme(.dark)
         }
     }
 }
