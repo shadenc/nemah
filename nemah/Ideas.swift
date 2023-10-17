@@ -16,7 +16,7 @@ struct Ideas: View {
         ZStack{
            
                 VStack{
-                    Text("Not sure what do you want to cook?").font(.title).bold().padding(.top, 20.0)
+                    Text("Not sure what do you what to cook?").font(.title).bold().padding(.top, 20.0)
                         .foregroundColor(.white)
                     
                     
