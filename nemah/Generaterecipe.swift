@@ -121,10 +121,22 @@ struct GenerateRecipes: View {
                                               
                                             }
                                         }
-                                    
+                                    VStack{
+                                        HStack{
+                                            Text("Meats")
+                                                .font(.title2)
+                                                .foregroundColor(.white)
+                                
+                                                .position(CGPoint(x: 50, y:-30))
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                    }
                                 }
                                 
-                             
+                        
                                 .navigationBarTitleDisplayMode(.inline)
                                 .toolbar{
                                     ToolbarItem(placement: .topBarTrailing) {
@@ -165,6 +177,16 @@ struct GenerateRecipes: View {
                                 ZStack{
                                     Color(red: 37.0 / 255.0, green: 43.0 / 255.0, blue: 57.0 / 255.0).ignoresSafeArea()
                                     
+                                    ScrollView{
+                                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
+                                            Image("apple")
+                                            Image("Banana")
+                                            Image("grab")
+                                            Image("ja")
+                                            Image("Redbary")
+                                           
+                                        }
+                                    }
 
                                         ScrollView{
                                             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
@@ -172,7 +194,19 @@ struct GenerateRecipes: View {
                                               
                                             }
                                         }
-                                    
+                                    VStack{
+                                        HStack{
+                                            Text("Frouts")
+                                                .font(.title2)
+                                                .foregroundColor(.white)
+                                
+                                                .position(CGPoint(x: 50, y:-30))
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                    }
                                 }
                                 
                              
@@ -217,12 +251,31 @@ struct GenerateRecipes: View {
 
                                         ScrollView{
                                             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
-                                                Image("fish")
-                                                Image("meat1")
-                                                Image("chickin")
-                                              
+                                                Image("lim")
+                                                Image("mal")
+                                                Image("on")
+                                                Image("pam")
+                                                Image("pro")
+                                                Image("qr")
+                                                Image("tho")
+                                                Image("Tom")
+                                                Image("tom2")
+                                                Image("ze")
                                             }
                                         }
+                                    VStack{
+                                        HStack{
+                                            Text("Vegetables")
+                                                .font(.title2)
+                                                .foregroundColor(.white)
+                                
+                                                .position(CGPoint(x: 70, y:-30))
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                    }
                                     
                                 }
                                 
@@ -266,13 +319,25 @@ struct GenerateRecipes: View {
 
                                         ScrollView{
                                             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
-                                                Image("fish")
-                                                Image("meat1")
-                                                Image("chickin")
+                                                Image("ch")
+                                                Image("milk2 1")
+                                                
                                               
                                             }
                                         }
-                                    
+                                    VStack{
+                                        HStack{
+                                            Text("Milk and Cheese")
+                                                .font(.title2)
+                                                .foregroundColor(.white)
+                                
+                                                .position(CGPoint(x: 99, y:-30))
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                    }
                                 }
                              
                                 .navigationBarTitleDisplayMode(.inline)
@@ -318,13 +383,26 @@ struct GenerateRecipes: View {
 
                                 ScrollView{
                                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10){
-                                        Image("fish")
-                                        Image("meat1")
-                                        Image("chickin")
-                                      
+                                        Image("cor 1")
+                                        Image("sh")
+                                        Image("pin")
+                                        Image("Rice")
+                                        Image("ads")
                                     }
                                 }
-                            
+                            VStack{
+                                HStack{
+                                    Text("Grins")
+                                        .font(.title2)
+                                        .foregroundColor(.white)
+                        
+                                        .position(CGPoint(x: 45, y:-30))
+                                    
+                                    
+                                }
+                                
+                                
+                            }
                         }
                      
                         .navigationBarTitleDisplayMode(.inline)
