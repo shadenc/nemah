@@ -12,8 +12,7 @@ struct nemahApp: App {
     var body: some Scene {
         WindowGroup {
 
-            RecipeIngredientsView()
-                .preferredColorScheme(.dark)
+            Ideas()
 
         }
     }

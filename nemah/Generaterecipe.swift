@@ -51,12 +51,11 @@ struct GenerateRecipes: View {
     
     
     @State var ingredientsDataGrains = [
-        Ingredient(name: "cor 1", imageName: "cor 1"),
-        Ingredient(name: "sh", imageName: "sh"),
-        Ingredient(name: "pin", imageName: "pin"),
-        Ingredient(name: "Rice", imageName: "Rice"),
-        Ingredient(name: "ads", imageName: "ads")
+        Ingredient(name: "ad", imageName: "ad"),
+        Ingredient(name: "ak", imageName: "ak"),
+        Ingredient(name: "ricew", imageName: "ricew")
     ]
+    
     
     
     @State var selectedIngredientsDicMeat: [UUID: Bool] = [:]
@@ -127,14 +126,16 @@ struct GenerateRecipes: View {
                                     
                                     
                                     
-                                    Button(action: {})  { Label("Generate Recipe", systemImage: "wand.and.stars")
-                                        
-                                            .foregroundColor(Color(#colorLiteral(red: 0.7763370872, green: 1, blue: 0.8602109551, alpha: 1)))
-                                            .frame(width: 316, height: 55)
-                                            .overlay(RoundedRectangle(cornerRadius: 15)
-                                                .stroke(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1))))
-                                    }
+                                    VStack {
                                     
+                                        NavigationLink(destination: RecipeIngredientsView()) {
+                                            Label("Generate Recipe", systemImage: "wand.and.stars")
+                                                .foregroundColor(Color(#colorLiteral(red: 0.7763370872, green: 1, blue: 0.8602109551, alpha: 1)))
+                                                .frame(width: 316, height: 55)
+                                                .overlay(RoundedRectangle(cornerRadius: 15)
+                                                    .stroke(Color(#colorLiteral(red: 0, green: 0.702395618, blue: 0.536053896, alpha: 1))))
+                                        }
+                                    }
                                     
                                 }
                             }
@@ -276,7 +277,7 @@ struct GenerateRecipes: View {
                                             .stroke(Color.clear, lineWidth: 10)
                                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 4)
                                     )
-                                Text("Frouts")
+                                Text("Fruits")
                                     .font(.system(size: 36, weight: .bold))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -336,7 +337,7 @@ struct GenerateRecipes: View {
                                     }
                                     VStack{
                                         HStack{
-                                            Text("Frouts")
+                                            Text("Fruits")
                                                 .font(.title2)
                                                 .foregroundColor(.white)
                                                 .position(CGPoint(x: 50, y:-30))
@@ -472,7 +473,7 @@ struct GenerateRecipes: View {
                                     .cornerRadius(10)
                                 
                                 
-                                Text("Milk and cheese")
+                                Text("Milk and Cheese")
                                     .font(.system(size: 36, weight: .bold))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -633,7 +634,7 @@ struct GenerateRecipes: View {
                                 }
                                 VStack{
                                     HStack{
-                                        Text("Grins")
+                                        Text("Grains")
                                             .font(.title2)
                                             .foregroundColor(.white)
                                         

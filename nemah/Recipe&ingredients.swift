@@ -172,6 +172,7 @@ struct RecipeIngredientsView: View {
                     
                 }
             }
+        .navigationBarBackButtonHidden(true)
         }
         
         

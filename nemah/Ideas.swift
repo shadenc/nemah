@@ -9,15 +9,17 @@ import SwiftUI
 
 struct Ideas: View {
     @State private var index = 0
-    var recipe: [String] = ["Edaam", "Kabda", "Marasee"]
+    var recipe: [String] = ["Group 7", "Group 8", "Group 17"]
     
     var body: some View {
         NavigationView{
         ZStack{
            
                 VStack{
-                    Text("Not sure what do you what to cook?").font(.title).bold().padding(.top, 20.0)
+                    Text("Not Sure What to Cook?").font(.largeTitle).bold().padding(.top, 20.0)
                         .foregroundColor(.white)
+                        .frame(width: 375)
+                        .offset(x: -35)
                     
                     
                     //Recipes Image
@@ -25,20 +27,29 @@ struct Ideas: View {
                         ForEach((0..<3), id: \.self) { index in
                             
                             Image(recipe[index])
-                                .resizable().frame(width: 303,height: 455)
+                                .resizable().frame(width: 315,height: 455)
+                                .cornerRadius(30)
+                                .overlay(
+                                    
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(Color(#colorLiteral(red: 0.1630259752, green: 0.6882660985, blue: 0.5447278023, alpha: 1)), lineWidth: 2)
+                                       
+                            )
                         }
                     }
-                    //Carousel 000
+                    
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    HStack(spacing: 2) {
-                        ForEach((0..<3), id: \.self) { index in
-                            Circle()
-                                .fill(index == self.index ? Color.white : Color.white.opacity(0.5))
-                                .frame(width: 12, height: 12)
-                            
+                    VStack{
+                        HStack(spacing: 7) {
+                            ForEach((0..<3), id: \.self) { index in
+                                Circle()
+                                    .fill(index == self.index ? Color.white : Color.white.opacity(0.5))
+                                    .frame(width: 10, height: 10)
+                                
+                            }
                         }
+                        .padding()
                     }
-                    .padding()
                     
                     NavigationLink(destination: GenerateRecipes()) {
                                           
@@ -50,7 +61,7 @@ struct Ideas: View {
                         }
                         .padding()
                         .background(Color("Button"))
-                        .cornerRadius(20)
+                        .cornerRadius(25)
                     }.padding(.bottom, 25.0)
                 }
                 
